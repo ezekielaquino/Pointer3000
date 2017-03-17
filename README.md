@@ -87,7 +87,7 @@ You can also access `all` points via `Pointer3k.points`.
 
 # Say Hi!
 
-Please do. If you have any comments or suggestions, i'd love to hear them. This utility is completely free but if you have used it for something cool please do let me know, let me see what you've made! Drop me a line at ezekielaquino@gmail.com or via @the_ezekiel on Twitter!
+Please do. If you have any comments or suggestions, i'd love to hear them. This utility is completely free but if you have used it for something cool please do let me know, let me see what you've made! Drop me a line at ezekielaquino@gmail.com or via [@the_ezekiel](http://twitter.com/the_ezekiel) on Twitter!
 
 P.S. Follow me on twitter!
 
