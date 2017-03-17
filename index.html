@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="what">What's going on here?</div>
+    <div id="about">
+      <a href="https://github.com/ezekielaquino/Pointer3000">
+      See those numbers to the right? That's what
+      Pointer3000 gives you. It's is a simple tiny
+      JS utility that gives you values of distance, rotation,
+      position (more to come) of your mouse pointer relative to
+      one or multiple points that you define. That's it. It
+      hopefully helps you to create cool stuff by using its
+      output to manipulate basically anything– rotate, scale, skew,
+      use 3d, what have you; these basic values are what I found
+      that I use a lot, and to be the very basic 'materials'
+      to go wild. This is why I decided to turn it into a little
+      add-on so I can just plop it in and start making stuff.<br/>
+      <br/>
+      Click anywhere here to see the code, further details and further "why?" and usage on GitHub.
+      </a>
+
+      <a href="mailto:ezekielaquino@gmail.com">Brought to you by Ezekiel Aquino</a>
+    </div>
+
+    <div class="circle circle--top circle--left"></div>
+    <div class="circle circle--top circle--right"></div>
+    <div class="circle circle--low circle--left"></div>
+    <div class="circle circle--low circle--right"></div>
+
+    <span class="line line--top line--left"><img src="text.svg" /></span>
+    <span class="line line--top line--right"><img src="text.svg" /></span>
+    <span class="line line--low line--left"><img src="text.svg" /></span>
+    <span class="line line--low line--right"><img src="text.svg" /></span>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script src="pointer3k.min.js"></script>
+  <script src="conicgradient.min.js"></script>
+  <script>
+    var circles = document.querySelectorAll('.circle');
+    var lines = document.querySelectorAll('.line');
+    var radius = circles[0].offsetWidth / 2;
+    var init = false;
+    var isAbout;
+
+    Pointer3k({
+      points: {
+        0: {
+          cx: circles[0].offsetLeft + radius,
+          cy: circles[0].offsetTop + radius
+        },
+        1: {
+          cx: circles[1].offsetLeft + radius,
+          cy: circles[1].offsetTop + radius
+        },
+        2: {
+          cx: circles[2].offsetLeft + radius,
+          cy: circles[2].offsetTop + radius
+        },
+        3: {
+          cx: circles[3].offsetLeft + radius,
+          cy: circles[3].offsetTop + radius
+        }
+      },
+      console: true
+    });
+
+    setTimeout(function() {
+      transformElements();
+    }, 500);
+
+    setTimeout(function() {
+      document.body.classList.add('is-init');
+
+      window.addEventListener('mousemove', function() {
+        transformElements();
+      });
+    }, 1500);
+
+    function transformElements() {
+      for (var i = 0; i < circles.length; i++) {
+        var circle = circles[i];
+        var line = lines[i];
+        var props = Pointer3k(i);
+        var width = props.hyp / 200;
+        var scale = props.hyp.map(100, 200, 1.02, 1);
+
+        circle.style.transform = 'rotate('+ props.deg +'deg) scale('+ scale +')';
+        line.style.transform = 'rotate('+ props.deg +'deg) scale('+ width +',1)';
+      }
+    }
+
+    what.addEventListener('click', function() {
+      var display = isAbout ? 'none' : 'block';
+      about.style.display = display;
+      isAbout = !isAbout;
+    });
+
+    Number.prototype.map = function (in_min, in_max, out_min, out_max) {
+      return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+    }
+  </script>
+</html>

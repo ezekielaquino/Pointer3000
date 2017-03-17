@@ -1,0 +1,119 @@
+html {
+  overflow: hidden;
+  background: black;
+}
+
+body {
+  pointer-events: none;
+  font-family: 'Arial';
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  color: white;
+}
+
+.is-init {
+  pointer-events: auto;
+}
+
+.circle {
+  position: absolute;
+  width: 40vh;
+  height: 40vh;
+  border-radius: 50%;
+  background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+  background-size: 42vh;
+  background-position: center center;
+  box-sizing: border-box;
+  font-size: 180px;
+  transition: transform 1s;
+  pointer-events: none;
+}
+
+.circle--top {
+  top: 6vh;
+}
+
+.circle--low {
+  top: 50vh;
+}
+
+.circle--left {
+  left: calc(50% - 42vh);
+}
+
+.circle--right {
+  left: calc(50% + 2vh);
+}
+
+.line {
+  position: absolute;
+  width: 200px;
+  height: 10px;
+  transform-origin: 0% 0%;
+  box-sizing: border-box;
+  transition: transform 1s;
+  pointer-events: none;
+  transform: scale(0.001, 1) rotate(0deg);
+}
+
+.line img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.line--top {
+  top: calc(26vh - 5px);
+}
+
+.line--low {
+  top: calc(70vh - 5px);
+}
+
+.line--left {
+  left: calc(50% - 22vh);
+}
+
+.line--right {
+  left: calc(50% + 22vh);
+}
+
+.is-init .circle,
+.is-init .line {
+  transition: none;
+}
+
+.js-pgProps {
+  z-index: -2;
+  top: 30px !important;
+  opacity: 0.8;
+  padding: 5px 0;
+  pointer-events: none;
+  font-weight: bold;
+}
+
+#what {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  cursor: pointer;
+  z-index: 99;
+}
+
+#about {
+  position: absolute;
+  width: 400px;
+  top: 50px;
+  left: 30px;
+  z-index: 99;
+  display: none;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 15px;
+}
