@@ -68,7 +68,7 @@
       let y = (event.pageY || 0) - cy;
       let rad = Math.atan2(y, x);
       let deg = rad * (180 / Math.PI);
-      let hyp = Math.hypot(x, y);
+      let dist = Math.hypot(x, y);
 
       point = {
         cx: cx,
@@ -77,7 +77,7 @@
         y: y,
         rad: rad,
         deg: deg,
-        hyp: hyp
+        dist: dist
       };
 
       propsKeys = Object.keys(point);
