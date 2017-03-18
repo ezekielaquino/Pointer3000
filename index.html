@@ -100,8 +100,8 @@
         var width = props.hyp / 200;
         var scale = props.hyp.map(100, 200, 1.02, 1);
 
-        circle.style.transform = 'rotate('+ props.deg +'deg) scale('+ scale +')';
-        line.style.transform = 'rotate('+ props.deg +'deg) scale('+ width +',1)';
+        circle.style.transform = 'rotate('+ props.deg +'deg) scale('+ scale +') translate3d(0,0,0)';
+        line.style.transform = 'rotate('+ props.deg +'deg) scale('+ width +',1) translate3d(0,0,0)';
       }
     }
 
