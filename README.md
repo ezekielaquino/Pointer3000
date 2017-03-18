@@ -29,7 +29,7 @@ If initialised without arguments it will simply register the center of the viewp
     cx: 640, // (centerX, reference)
     cy: 333, // (centerY, reference)
     deg: 43.42633594589745, // (degrees),
-    hyp: 426.8480408763756 // (distance from reference)
+    dist: 426.8480408763756 // (distance from reference)
     rad: 0.7579325443330766, // (radians)
     x: 187 // (positionX),
     y: 177 // (positionY)
@@ -65,7 +65,7 @@ So how do you get a specific point's particular value? You just do: `Pointer3k(p
 
 ```js
   // Get a specific point's value
-  var distanceFromReference = Pointer3k('aNicelyNamedPoint').hyp;
+  var distanceFromReference = Pointer3k('aNicelyNamedPoint').dist;
   var angleInDegrees = Pointer3k('aNicelyNamedPoint').deg;
   // ... so on
 ```
