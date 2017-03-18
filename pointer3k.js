@@ -62,8 +62,8 @@
       const key = keys[i];
       let point;
 
-      let cx = (points[key].cx == 'center' || !points[key].cx) ? defaults.points['pointA'].cx : points[key].cx;
-      let cy = (points[key].cy == 'center' || !points[key].cy) ? defaults.points['pointA'].cy : points[key].cy;
+      let cx = points[key].cx == 'center' ? defaults.points['pointA'].cx : points[key].cx;
+      let cy = points[key].cy == 'center' ? defaults.points['pointA'].cy : points[key].cy;
       let x = (event.pageX || 0) - cx;
       let y = (event.pageY || 0) - cy;
       let rad = Math.atan2(y, x);
