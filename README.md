@@ -70,6 +70,22 @@ So how do you get a specific point's particular value? You just do: `Pointer3k(p
   // ... so on
 ```
 
+If you want to pause updating values (basically just having an empty mousemove listener, performance gains or what have you) e.g. you only want values to be updated if a button has been clicked, then you use:
+
+```js
+  // passing true or false as argument will enable/disable the listener
+  Pointer3k(boolean);
+
+  // Sample usage, toggle pointer update
+  var updatePointer = false;
+
+  button.addEventListener(function() {
+    updatePointer = !updatePointer;
+
+    Pointer3k(updatePointer);
+  });
+```
+
 You can also access `all` points via `Pointer3k.points`.
 
 
@@ -82,7 +98,6 @@ You can also access `all` points via `Pointer3k.points`.
 
 # Plans
 
-- Add something like a 'listenIf' option which only updates values if it evaluates to true. 
 - More values e.g. adjacent, opposite and corresponding angles
 - point relative to a parent element
 - any suggestions?

@@ -8,7 +8,8 @@
 'use strict';
 
 (function() {
-  let keys, propsKeys, points, isConsole, propElems, initialPos, listener;
+  let keys, propsKeys, points, propElems;
+  let isConsole, initialPos, listener, update;
 
   const defaults = {
     points: {
@@ -26,6 +27,9 @@
     // object containing the named point
     if (typeof arg === 'string' || Number.isInteger(arg)) {
       return window.Pointer3k.points[arg];
+    } else if (typeof arg == 'boolean') {
+      // we 'pause' value updating
+      update = arg;
     } else {
       // If passed an object, then we initialise
       // the plugin and register the points
@@ -48,7 +52,9 @@
 
       // Listen to mousemove within the viewport
       window.addEventListener(listener, function(event) {
-        register(event);
+        if (eval(update)) {
+          register(event);
+        }
       });
     }
   };
