@@ -21,6 +21,8 @@ Simply call Pointer3000. This will create a global variable `Pointer3k` which co
   Pointer3k();
 ```
 
+While the utility registers events on `mousemove` by default, you can use values via `requestAnimationFrame` so you don't have to have another `mousemove` listener to update the view.
+
 If initialised without arguments it will simply register the center of the viewport as its one and only reference point. The default name of this auto-created point is `pointA`. If you do a `console.log(Pointer3k('pointA')` after initialisation, you will find that a point object contains the following data:
 
 ```js
