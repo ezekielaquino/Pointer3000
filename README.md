@@ -4,7 +4,7 @@ A simple little utility that makes it easy to work with values calculated from t
 [🍒 VISIT THE PROJECT (MINI DEMO) WEBSITE](http://ezekielaquino.com/Pointer3000)
 
 # Why?
-I experiment a lot with interactive graphics and interaction in general, and have found that I often have to calculate `this` and `that`, particularly the distance and angle from (a) specific point(s). I decided to make this little utility so I can just plop it in and start trying things out.
+I experiment a lot with interactive graphics and interaction in general, and have found that I often have to calculate `this` and `that`, particularly the distance and angle from (a) specific point(s). I decided to make this little utility so I can just plop it in and start trying things out. This is meant to be used in compositions with just regular DOM elements– the constraint of what can be done with just a 'regular' page is a great source of possibility.
 
 While the output is very 'basic', I found that what can be done with them when used to manipulate `things` are endless. I hope you find this stirring your creativity and imagination. Lots of possibilities!
 
@@ -76,18 +76,20 @@ You can also access `all` points via `Pointer3k.points`.
 # Notes
 
 - If manipulating DOM elements, it is still best to use transforms as they are way more performant than manipulating e.g. width and height.
+- If you are going to be doing something relatively complex graphic wise then I think you should be looking at canvas or other drawing libraries. Those would be more performant, and have more math methods at your disposal. e.g. paperJS, raphael, svg.js
 - Having `console: true` or having inspector open (as you already know) will reduce performance as it will be updating values, recording timelines, highlighting updated DOM elements what have you.
 
 
 # Plans
 
+- Add something like a 'listenIf' option which only updates values if it evaluates to true. 
 - More values e.g. adjacent, opposite and corresponding angles
 - point relative to a parent element
 - any suggestions?
 
 # Say Hi!
 
-Please do. If you have any comments or suggestions, i'd love to hear them. This utility is completely free but if you have used it for something cool please do let me know, let me see what you've made! Drop me a line at ezekielaquino@gmail.com or via [@the_ezekiel](http://twitter.com/the_ezekiel) on Twitter!
+Please do. If you have any comments or suggestions, i'd love to hear them. This utility is completely free but if you have used it for something cool please do let me know, let me see what you've made! Drop me a line at ezekielaquino@gmail.com or via [@the_ezekiel](http://twitter.com/the_ezekiel) or [Share this](https://twitter.com/home?status=%E2%86%98%E2%86%98%20Supercharged%20pointer%20interactions%20%E2%80%93%20POINTER3000%20%E2%86%99%E2%86%99%20http%3A//ezekielaquino.com/Pointer3000) on Twitter!
 
 P.S. Follow me on twitter!
 
