@@ -39,6 +39,7 @@
       isConsole = arg.console;
       initialPos = arg.initialPos || { pageX: window.innerWidth / 2, pageY: window.innerHeight / 2 };
       listener = arg.listener || 'mousemove';
+      update = true;
 
       // initial register, before initial mousemove
       // so we populate the values for the console
