@@ -53,7 +53,7 @@
 
       // Listen to mousemove within the viewport
       window.addEventListener(listener, function(event) {
-        if (eval(update)) {
+        if (update) {
           register(event);
         }
       });
