@@ -126,12 +126,11 @@ a {
 
 .stretchy span {
   position: absolute;
-  width: 5000px;
+  width: 10vh;
   height: 20px;
-  background: url('text.svg');
-  background-size: 300px 20px;
+  background: url('text.svg') no-repeat left center / 100% 100%;
   top: calc(50% - 10px);
-  backface-visibility: hidden;
+  /*backface-visibility: hidden;*/
 }
 
 .stretchy img {
@@ -147,7 +146,7 @@ a {
 }
 
 .stretchy--left span {
-  right: calc(-2500px - 2vh);
+  right: -12vh;
 }
 
 .stretchy--left img {
@@ -161,7 +160,7 @@ a {
 }
 
 .stretchy--right span {
-  left: calc(-2500px - 2vh);
+  left: -12vh;
 }
 
 .stretchy--right img {

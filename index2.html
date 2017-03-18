@@ -64,7 +64,7 @@
         var m = props.hyp.map(0, window.innerWidth, 1, 0.1);
 
         stretchy.style.transform = 'scale('+ s +', '+ m +')';
-        dash.style.transform = 'rotate('+ props.deg +'deg) scale('+ n +') translate3d(0,0,0)';
+        dash.style.transform = 'rotate('+ props.deg +'deg) scale('+ s +','+ n +') translate3d(0,0,0)';
       }
     });
 
