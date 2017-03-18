@@ -117,3 +117,92 @@ a {
   color: inherit;
   margin-bottom: 15px;
 }
+
+.stretchy {
+  width: 50vw;
+  height: 20vh;
+  position: absolute;
+}
+
+.stretchy span {
+  position: absolute;
+  width: 5000px;
+  height: 20px;
+  background: url('text.svg');
+  background-size: 300px 20px;
+  top: calc(50% - 10px);
+  backface-visibility: hidden;
+}
+
+.stretchy img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.stretchy--left {
+  left: 0;
+  transform-origin: 0% 0%;
+  padding-right: 20vh;
+}
+
+.stretchy--left span {
+  right: calc(-2500px - 2vh);
+}
+
+.stretchy--left img {
+  left: 0;
+}
+
+.stretchy--right {
+  right: 0;
+  transform-origin: 100% 0%;
+  padding-right: 20vh;
+}
+
+.stretchy--right span {
+  left: calc(-2500px - 2vh);
+}
+
+.stretchy--right img {
+  right: 0;
+}
+
+.stretchy:nth-child(1) {
+  top: 0;
+}
+
+.stretchy:nth-child(2) {
+  top: 20vh;
+}
+
+.stretchy:nth-child(3) {
+  top: 40vh;
+}
+
+.stretchy:nth-child(4) {
+  top: 60vh;
+}
+
+.stretchy:nth-child(5) {
+  top: 80vh;
+}
+
+.nav {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  z-index: 9999;
+  pointer-events: auto !important;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav__item {
+  display: inline-block;
+  margin-right: 30px;
+  color: seagreen;
+}

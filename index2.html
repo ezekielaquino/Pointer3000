@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pointer3000</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <span class="stretchy stretchy--left"><img src="text.svg" /><span></span></span>
+    <span class="stretchy stretchy--right"><span></span><img src="text.svg" /></span>
+    <span class="stretchy stretchy--left"><img src="text.svg" /><span></span></span>
+    <span class="stretchy stretchy--right"><span></span><img src="text.svg" /></span>
+    <span class="stretchy stretchy--left"><img src="text.svg" /><span></span></span>
+    <nav class="nav">
+      <ul>
+        <li class="nav__item"><a href="http://ezekielaquino.com/Pointer3000/">Home</a></li>
+        <li class="nav__item"><a href="http://ezekielaquino.com/Pointer3000/index2.html">Stretchies</a></li>
+      </ul>
+    </nav>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script src="pointer3k.js"></script>
+  <script src="conicgradient.min.js"></script>
+  <script>
+    var stretchies = document.querySelectorAll('.stretchy');
+    var width = stretchies[0].offsetWidth;
+    var height = stretchies[0].offsetHeight;
+    var h = height / 2;
+
+    Pointer3k({
+      points: {
+        0: {
+          cx: 0,
+          cy: stretchies[0].offsetTop + h
+        },
+        1: {
+          cx: window.innerWidth,
+          cy: stretchies[1].offsetTop + h
+        },
+        2: {
+          cx: 0,
+          cy: stretchies[2].offsetTop + h
+        },
+        3: {
+          cx: window.innerWidth,
+          cy: stretchies[3].offsetTop + h
+        },
+        4: {
+          cx: 0,
+          cy: stretchies[4].offsetTop + h
+        }
+      }
+    });
+
+    window.addEventListener('mousemove', function() {
+      for (var i = 0; i < stretchies.length; i++) {
+        var stretchy = stretchies[i];
+        var dash = stretchy.querySelector('span');
+        var props = Pointer3k(i);
+        var s = props.hyp.map(0, window.innerWidth, 1.75, 0.25);
+        var n = props.hyp.map(0, window.innerWidth, 1, 4);
+        var m = props.hyp.map(0, window.innerWidth, 1, 0.1);
+
+        stretchy.style.transform = 'scale('+ s +', '+ m +')';
+        dash.style.transform = 'rotate('+ props.deg +'deg) scale('+ n +') translate3d(0,0,0)';
+      }
+    });
+
+    Number.prototype.map = function (in_min, in_max, out_min, out_max) {
+      return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+    }
+  </script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-93957711-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</html>
