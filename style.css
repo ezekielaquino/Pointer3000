@@ -204,5 +204,9 @@ ul {
 .nav__item {
   display: inline-block;
   margin-right: 30px;
-  color: seagreen;
+  color: cyan;
+}
+
+.nav__item a {
+  margin-bottom: 0;
 }
