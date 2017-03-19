@@ -4,7 +4,7 @@ A simple little utility that makes it easy to work with values calculated from t
 [🍒 VISIT THE PROJECT (MINI DEMO) WEBSITE](http://ezekielaquino.com/Pointer3000)
 
 # Why?
-I experiment a lot with interactive graphics and interaction in general, and have found that I often have to calculate `this` and `that`, particularly the distance and angle from (a) specific point(s). I decided to make this little utility so I can just plop it in and start trying things out. This is meant to be used in compositions with just regular DOM elements– the constraint of what can be done with just a 'regular' page is a great source of possibility.
+I experiment a lot with interactive graphics and interaction in general, and have found that I often have to calculate `this` and `that`, particularly the distance and angle from (a) specific point(s). I decided to make this little utility so I can just plop it in and start trying things out. This is meant to be used in compositions with just regular DOM elements– the constraint of what can be done with just a 'regular' page I find to be a very welcome creative challenge.
 
 While the output is very 'basic', I found that what can be done with them when used to manipulate `things` are endless. I hope you find this stirring your creativity and imagination. Lots of possibilities!
 
@@ -14,14 +14,14 @@ While the output is very 'basic', I found that what can be done with them when u
 
 
 # How?
-Simply call Pointer3000. This will create a global variable `Pointer3k` which contains `points`. Values are updated onMouseMove by default (see available settings below).
+Simply call Pointer3000. This will create a global variable `Pointer3k` which contains `points`. Values are updated onMouseMove by default (see available settings below). Download the script or `npm install pointer3000`.
 
 ```js
   // Initialize
   Pointer3k();
 ```
 
-While the utility registers events on `mousemove` by default, you can use values via `requestAnimationFrame` so you don't have to have another `mousemove` listener to update the view.
+While the utility registers events on `mousemove` by default, you can use values via `requestAnimationFrame` so you don't have to register another `mousemove` listener to update the view.
 
 If initialised without arguments it will simply register the center of the viewport as its one and only reference point. The default name of this auto-created point is `pointA`. If you do a `console.log(Pointer3k('pointA')` after initialisation, you will find that a point object contains the following data:
 
