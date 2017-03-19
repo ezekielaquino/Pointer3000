@@ -80,29 +80,32 @@
       console: true
     });
 
+    Pointer3k(false);
+
     setTimeout(function() {
       transformElements();
     }, 500);
 
     setTimeout(function() {
       document.body.classList.add('is-init');
-
-      window.addEventListener('mousemove', function() {
-        transformElements();
-      });
+      Pointer3k(true);
     }, 1500);
+
+    window.requestAnimationFrame(transformElements);
 
     function transformElements() {
       for (var i = 0; i < circles.length; i++) {
         var circle = circles[i];
         var line = lines[i];
         var props = Pointer3k(i);
-        var width = props.hyp / 200;
-        var scale = props.hyp.map(100, 200, 1.02, 1);
+        var width = props.dist / 200;
+        var scale = props.dist.map(100, 200, 1.02, 1);
 
         circle.style.transform = 'rotate('+ props.deg +'deg) scale('+ scale +') translate3d(0,0,0)';
         line.style.transform = 'rotate('+ props.deg +'deg) scale('+ width +',1) translate3d(0,0,0)';
       }
+
+      window.requestAnimationFrame(transformElements);
     }
 
     what.addEventListener('click', function() {
