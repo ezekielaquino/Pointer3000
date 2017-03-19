@@ -38,6 +38,8 @@ If initialised without arguments it will simply register the center of the viewp
   }
 ```
 
+![fig](https://d3uepj124s5rcx.cloudfront.net/items/1F2y3c371M2E3A2r1x32/figure.png?v=8fb5b2a0)
+
 But you probably want to define specific points of reference, have multiple and even name them for convenience, so you'd want to initialize it like so:
 
 ```js
