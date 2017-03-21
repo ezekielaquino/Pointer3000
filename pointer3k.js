@@ -74,7 +74,7 @@
       let x = (event.pageX || 0) - cx;
       let y = (event.pageY || 0) - cy;
       let rad = Math.atan2(y, x);
-      let deg = rad * (180 / Math.PI);
+      let deg = (rad * (180 / Math.PI) + 360) % 360;
       let dist = Math.hypot(x, y);
 
       point = {
