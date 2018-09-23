@@ -1,14 +1,14 @@
 # Pointer3000
 A simple little utility that makes it easy to work with values calculated from the pointer's location relative to one or multiple defined points. 🙋🏼
 
-[🍒 VISIT THE PROJECT (MINI DEMO) WEBSITE](http://ezekielaquino.com/Pointer3000)
+[🍒 VISIT THE PROJECT (MINI DEMO) WEBSITE](https://ezekielaquino.github.io/Pointer3000/)
 
 # Why?
 I experiment a lot with interactive graphics and interaction in general, and have found that I often have to calculate `this` and `that`, particularly the distance and angle from (a) specific point(s). I decided to make this little utility so I can just plop it in and start trying things out. This is meant to be used in compositions with just regular DOM elements– the constraint of what can be done with just a 'regular' page I find to be a very welcome creative challenge.
 
 While the output is very 'basic', I found that what can be done with them when used to manipulate `things` are endless. I hope you find this stirring your creativity and imagination. Lots of possibilities!
 
-[💅🏾 THE PROJECT SITE IS A MINI DEMO](http://ezekielaquino.com/Pointer3000)
+[💅🏾 THE PROJECT SITE IS A MINI DEMO](https://ezekielaquino.github.io/Pointer3000/)
 
 *More demos coming soon (mocking 3d, AppleTV rotating cards, etc)*
 
